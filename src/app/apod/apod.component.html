@@ -1,7 +1,13 @@
 <mat-tab-group>
   <mat-tab label="Latest">
+
     
-    <ul  >
+    <h2 class="heading">Astronomy Pictures</h2>
+    <p class="tit-le">Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.</p>
+    
+    <ul   infiniteScroll
+    [infiniteScrollDistance]="0.1"
+    (scrolled)="onScroll()">
 
     <li *ngFor="let post of posts" class="box">
 
@@ -28,6 +34,10 @@
 
   <mat-tab label="Favourites">
     
+    <h2 class="heading">Astronomy Pictures</h2>
+    <p class="tit-le">Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.</p>
+    <p class="tit-le">You can see your favourites !!!</p>
+
   <div>
 
     <ul >
@@ -59,16 +69,43 @@
 
   <mat-tab label="Date">
 
+    <p class="tit-le">Please choose the date and submit it to see the  APOD.</p>
+
     <div class="date">
     
-   <h5>From : </h5> <input type="date" id="myDate" value="2021-01-17">
-
-   <h5>To : </h5> <input type="date" id="myDate" value="2021-01-17">
+   <h5 class="f-to">From : </h5> <input type="date" id="startDate" value="2021-01-17" class="f-d">
 
    <br>
-  
-    <button>Submit</button>
+   <br>
+   <h5 class="f-to">To : </h5> <input type="date" id="endDate" value="2021-01-17" class="f-d">
+
+   <br>
+  <br>
+    <button class="sbt" (click)="photosByDate()">Submit</button>
     
+  </div>
+
+  <div>
+    <ul>
+
+      <li *ngFor="let post of dateWisePosts" class="box">
+  
+        <h4 class="titl">{{post.title}}</h4>
+        
+        
+        <p class="desc">{{post.explanation}}</p>
+        <hr>
+  
+        <button mat-icon-button color="warn" (click)=addToFavourites(post,$event) >
+          <mat-icon class="unFavourite">favorite</mat-icon>
+        </button>
+       <img src="{{post.hdurl}}" class="imag"  (error)="doSomethingOnError($event)">     
+       <h6 class="dat">{{post.date}}</h6>
+  
+      </li>
+      
+      
+     </ul>
   </div>
 
   </mat-tab>

@@ -27,6 +27,7 @@
 
   .date{
     text-align: center;
+    margin-top:25px;
   }
 
 
@@ -60,6 +61,40 @@
 .box{
   padding: 20px;
   border: 1px solid #f9f3f3;
-  box-shadow: 5px 5px 20px 5px #dedcdc;
+  box-shadow: 2px 2px 9px 2px #dedcdc;
 }
 
+.sbt{
+  margin-bottom: 30px;
+  background: #98263b;
+    color: #f3e9e9;
+    width: 50%;
+    height: 40px;
+    border: 0px;
+    outline: none;
+}
+
+.heading{
+  text-align: center;
+    margin-top: 25px;
+}
+
+.tit-le{
+  text-align: center;
+  margin: 10px;
+}
+
+.f-d{
+  height: 40px;
+  background: brown;
+  border: 0px;
+  padding: 7px;
+  color: white;
+}
+
+
+.f-to{
+  font-size: 15px;
+    font-weight: 500;
+    color: coral;
+}

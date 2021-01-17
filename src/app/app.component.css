@@ -11,9 +11,7 @@
 }
 
 
-body{
-    background-color:#dde8f1;
-  }
+
   header {
       transition: all 0.3s ease-in-out;
       box-shadow: 0 1px 6px 0 rgb(23, 23, 25);
@@ -56,3 +54,9 @@ body{
   }
  
   }
+
+
+
+
+
+

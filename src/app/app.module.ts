@@ -16,9 +16,10 @@ import { FormsModule } from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { DateComponent } from './date/date.component';
+
 
 import { HttpClientModule } from '@angular/common/http';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 
@@ -32,14 +33,14 @@ const materialModules = [
   declarations: [
     AppComponent,
     ApodComponent,
-    DateComponent,
+    
  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
    BrowserAnimationsModule, MatTabsModule,MatButtonModule, MatToolbarModule ,MatIconModule 
-  ,FormsModule, MatDatepickerModule, MatNativeDateModule,MatFormFieldModule,HttpClientModule ],
+  ,FormsModule, MatDatepickerModule, MatNativeDateModule,MatFormFieldModule,HttpClientModule,InfiniteScrollModule ],
   
   providers: [],
   bootstrap: [AppComponent]
