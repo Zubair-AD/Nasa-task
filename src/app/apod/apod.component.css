@@ -1,0 +1,56 @@
+
+
+.example-action-button {
+    margin-top: 8px;
+    margin-right: 8px;
+  }
+
+  ul li{
+    list-style-type: none;
+  }
+
+  ul{
+    padding: 15px;
+  }
+
+  li{
+    margin: 20px;
+  }
+
+  .imag{
+    box-shadow: 1px 1px 5px 1px #6d6565;
+    width: 100%;
+    height: 80vh;
+    border-radius: 1px;
+
+  }
+
+
+    
+ .desc{
+  overflow: hidden;
+   cursor:pointer;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; 
+   -webkit-box-orient: vertical;
+   color:grey;
+   font-size:13px;
+  }
+
+.desc:hover {
+  white-space: normal;
+}
+
+.titl{
+  font-size: 15px;
+    font-weight: 600;
+}
+
+.dat{
+  font-size: 12px;
+    margin-top: 6px;
+}
+
+
+
