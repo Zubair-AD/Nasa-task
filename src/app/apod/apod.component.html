@@ -1,20 +1,22 @@
 <mat-tab-group>
   <mat-tab label="Latest">
     
-    <ul >
+    <ul  >
 
-    <li *ngFor="let post of posts">
+    <li *ngFor="let post of posts" class="box">
 
       <h4 class="titl">{{post.title}}</h4>
+      
+      
+      <p class="desc">{{post.explanation}}</p>
+      <hr>
 
-      <button mat-icon-button color="warn">
-        <mat-icon>favorite</mat-icon>
+      <button mat-icon-button color="warn" (click)=addToFavourites(post,$event) >
+        <mat-icon class="unFavourite">favorite</mat-icon>
       </button>
-     <a href="{{post.url}}"> <img src="{{post.hdurl}}" class="imag"  (error)="doSomethingOnError($event)"> </a>
-    
+     <img src="{{post.hdurl}}" class="imag"  (error)="doSomethingOnError($event)">     
      <h6 class="dat">{{post.date}}</h6>
-     
-     <p class="desc">{{post.explanation}}</p>
+
     </li>
     
     
@@ -26,12 +28,48 @@
 
   <mat-tab label="Favourites">
     
+  <div>
+
+    <ul >
+
+      <li *ngFor="let post of loadFavoutrites()" class="box">
+  
+        <h4 class="titl">{{post.title}}</h4>
+        <p class="desc">{{post.explanation}}</p>
+
+        <hr>
+  
+        <button mat-icon-button color="warn">
+          <mat-icon >favorite</mat-icon>
+        </button>
+       <a href="{{post.url}}"> <img src="{{post.hdurl}}" class="imag"  (error)="doSomethingOnError($event)"> </a>
+      
+       <h6 class="dat">{{post.date}}</h6>
+       
+      
+      </li>
+      
+      
+     </ul>
+
+  </div>
+
+
   </mat-tab>
 
   <mat-tab label="Date">
+
+    <div class="date">
     
+   <h5>From : </h5> <input type="date" id="myDate" value="2021-01-17">
+
+   <h5>To : </h5> <input type="date" id="myDate" value="2021-01-17">
+
+   <br>
+  
+    <button>Submit</button>
     
-    
+  </div>
 
   </mat-tab>
 </mat-tab-group>

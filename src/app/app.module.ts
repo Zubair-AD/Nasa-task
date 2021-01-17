@@ -18,7 +18,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { DateComponent } from './date/date.component';
 
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -39,7 +39,7 @@ const materialModules = [
     BrowserModule,
     AppRoutingModule,
    BrowserAnimationsModule, MatTabsModule,MatButtonModule, MatToolbarModule ,MatIconModule 
-  ,FormsModule, MatDatepickerModule, MatNativeDateModule,MatFormFieldModule ],
+  ,FormsModule, MatDatepickerModule, MatNativeDateModule,MatFormFieldModule,HttpClientModule ],
   
   providers: [],
   bootstrap: [AppComponent]
